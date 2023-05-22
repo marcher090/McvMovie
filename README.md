@@ -1,16 +1,43 @@
-#Mvc Movie Web App Toutorial
+<style>
+courier { font-family: consolas }
+</style>
+<courier>
+<h1>README: Mvc Movie Web App Toutorial</h1>
 <br>
 This repo includes the code utilized to make a ASP .NET web app using a MVC framework. MVC is an acronym for Model-View-Controller and is a pattern in software design that is used when developing an application's user interfaces, data, and controlling logic.<br>
 <br>
-Model
+<b>Model</b>
 : Manages data and business logic 
 <br><br>
-View 
+<b>View</b>
 : Handles layout and display 
 <br><br>
-Controller
+<b>Controller</b>
 : Routes commands to the model and view parts 
 <br><br>
 Figure 1. MVC Diagram
 <br><br>
 ![MVC Diagram](https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png)
+<br><br>
+<h3>Passing Data from Controller to View</h3>
+
+The actions of the controller are dictated by the URL. It is from the URL where the inputs are provided to the controller and subsequently passes them to the relevant controller class which then:<br>
+<ol>
+<li>retrieves the data from a source</li>
+<li>determines which view to utilize to format a HTML response to the browser</li>
+</ol>
+Where the controller connects to the source and, through the encoded logic, determines what view to use, the view template renders the response by providing the HTML reponse. 
+<br><br>
+Therefore, view templates should <b>not</b>: 
+<ul>
+<li>Do business logic</li>
+<li>Interact with a database directly</li>
+</ul><br>
+Keeping this clear boundary between the view and the controller wensures that the code is clean, testable, and maintainable. <br>
+<br>
+<i><h4>Usual Pathway (without model)</h4></i>
+URL ->MVC Model Binder -> Controller -> ViewData Dictionary -> View -> HTML
+
+
+
+</courier>

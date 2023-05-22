@@ -4,23 +4,27 @@ using System.Text.Encodings.Web;
 namespace MvcMovie.Controllers;
 
 
-
-
 public class HelloWorldController : Controller
 {
     // 
     // GET: /HelloWorld/
     public IActionResult Index()
     {
-        return View();                                                                              // The index /action method/ calls the controller's view method. View templates are made using Razor and have a .cshtml file
-                                                                                                    // extenstion and provide an elegant way of creating HTML output in c#
+        return View();                                           // The index /action method/ calls the controller's view method. View templates are made using Razor and have a .cshtml file xtenstion and provide an elegant way of creating HTML output in c#.
+                                                                 //It should also be remembered that Controller methods generally return an IActionResult or a class derived from ActionResult 
     }
     // 
     // GET: /HelloWorld/Welcome/ 
     // Requires using System.Text.Encodings.Web;
-    public string Welcome(string name, int ID = 1)
+    public IActionResult Welcome(string name, int numTimes = 1)
     {
-        return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");                                   
+        ViewData["Message"] = "Hello" + name;
+        ViewData["NumTimes"] = numTimes;
+        return View();
+        //Before, the welcome method of the controller took parameters from the URL and directly output them to the browser. To adhere to the seperation between controller and view, we call on a view to display the information. 
+               
+        
+
     }
     // GET: /HelloWorld/Test2/ 
     public string Test2()
@@ -28,6 +32,35 @@ public class HelloWorldController : Controller
         return "This is the Test2 action method...";
     }
 }
+
+
+
+
+
+
+
+//public class HelloWorldController : Controller
+//{
+//    // 
+//    // GET: /HelloWorld/
+//    public IActionResult Index()
+//    {
+//        return View();                                           // The index /action method/ calls the controller's view method. View templates are made using Razor and have a .cshtml file xtenstion and provide an elegant way of creating HTML output in c#.
+//                                                                //It should also be remembered that Controller methods generally return an IActionResult or a class derived from ActionResult 
+//    }
+//    // 
+//    // GET: /HelloWorld/Welcome/ 
+//    // Requires using System.Text.Encodings.Web;
+//    public string Welcome(string name, int ID = 1)
+//    {
+//        return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");                                   
+//    }
+//    // GET: /HelloWorld/Test2/ 
+//    public string Test2()
+//    {
+//        return "This is the Test2 action method...";
+//    }
+//}
 
 
 /*
