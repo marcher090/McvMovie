@@ -11,9 +11,11 @@ This repo includes the code utilized to make a ASP .NET web app using a MVC fram
 <b>Controller</b>
 : Routes commands to the model and view parts 
 <br><br>
-Figure 1. MVC Diagram
+See below for a diagram representing the MVC architecture. 
 <br><br>
-![MVC Diagram](https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png)
+
+![MCV Diagram](https://www.visual-paradigm.com/servlet/editor-content/guide/uml-unified-modeling-language/what-is-model-view-control-mvc/sites/7/2019/09/model-view-controller.png)
+
 <br><br>
 <h3>Passing Data from Controller to View</h3>
 
