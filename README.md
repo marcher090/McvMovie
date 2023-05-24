@@ -1,7 +1,3 @@
-<style>
-courier { font-family: consolas }
-</style>
-<courier>
 <h1>README: Mvc Movie Web App Toutorial</h1>
 <br>
 This repo includes the code utilized to make a ASP .NET web app using a MVC framework. MVC is an acronym for Model-View-Controller and is a pattern in software design that is used when developing an application's user interfaces, data, and controlling logic.<br>
@@ -38,6 +34,3 @@ Keeping this clear boundary between the view and the controller wensures that th
 <i><h4>Usual Pathway (without model)</h4></i>
 URL ->MVC Model Binder -> Controller -> ViewData Dictionary -> View -> HTML
 
-
-
-</courier>
