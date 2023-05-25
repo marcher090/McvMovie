@@ -1,6 +1,7 @@
 <h1>README: Mvc Movie Web App Toutorial</h1>
 <br>
 This repo includes the code utilized to make a ASP .NET web app using a MVC framework. MVC is an acronym for Model-View-Controller and is a pattern in software design that is used when developing an application's user interfaces, data, and controlling logic.<br>
+The tutorial followed to create this web app can be found here: [Get Started with ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-7.0&tabs=visual-studio)
 <br>
 <b>Model</b>
 : Manages data and business logic 
