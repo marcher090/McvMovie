@@ -43,6 +43,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
+//In the code below, the AnchorTagHelper dynamically generates the HTML href attribute value from the controller action method and route id. This href attribute (ex. "/Movies/Edit/4") are a key element of the URL. 
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
